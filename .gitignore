@@ -1,0 +1,59 @@
+# Maven / Java build output
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# TestNG / Cucumber generated reports
+test-output/
+cucumber-reports/
+reports/
+screenshots/
+videos/
+traces/
+
+# Logs and runtime dumps
+*.log
+logs/
+hs_err_pid*
+replay_pid*
+
+# Eclipse metadata
+.project
+.classpath
+.settings/
+.metadata/
+bin/
+
+# IntelliJ / VS Code metadata
+.idea/
+*.iml
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local environment and secret overrides
+.env
+.env.*
+*.local
+src/test/resources/config/local.properties
+src/test/resources/config/secret.properties
+src/test/resources/config/*.override.properties
+
+# WebDriver binaries if downloaded manually
+chromedriver
+chromedriver.exe
+geckodriver
+geckodriver.exe
+msedgedriver
+msedgedriver.exe
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+~$*

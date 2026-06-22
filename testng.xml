@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MentorMatch Automation Suite" parallel="false">
+    <test name="Auth Smoke Flow">
+        <classes>
+            <class name="com.mentormatch.automation.runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
