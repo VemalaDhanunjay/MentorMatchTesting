@@ -1,6 +1,6 @@
-package com.mentormatch.automation.pages;
+package com.mentormatch.pages;
 
-import com.mentormatch.automation.config.ConfigReader;
+import com.mentormatch.utils.ConfigReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,8 +18,11 @@ public class LoginPage extends BasePage {
     }
 
     public void open() {
-        driver.get(ConfigReader.get("base.url"));
-        pauseForDemo();
+        openUrl(ConfigReader.get("base.url"));
+    }
+
+    public void openProtectedRouteAsGuest(String route) {
+        openRelativePath(route);
     }
 
     public boolean isDisplayed() {

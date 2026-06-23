@@ -1,4 +1,4 @@
-package com.mentormatch.automation.pages;
+package com.mentormatch.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
