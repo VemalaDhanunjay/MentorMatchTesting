@@ -1,4 +1,4 @@
-package com.mentormatch.automation.utils;
+package com.mentormatch.utils;
 
 public final class TestPause {
     private TestPause() {

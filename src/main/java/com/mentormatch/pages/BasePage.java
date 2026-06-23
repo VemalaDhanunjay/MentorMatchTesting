@@ -1,9 +1,12 @@
-package com.mentormatch.automation.pages;
+package com.mentormatch.pages;
 
-import com.mentormatch.automation.config.ConfigReader;
-import com.mentormatch.automation.utils.TestPause;
+import com.mentormatch.utils.ConfigReader;
+import com.mentormatch.utils.TestPause;
 import java.time.Duration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,9 +45,18 @@ public abstract class BasePage {
     protected boolean isVisible(By locator) {
         try {
             return visible(locator).isDisplayed();
-        } catch (RuntimeException exception) {
+        } catch (NoSuchElementException | StaleElementReferenceException | TimeoutException exception) {
             return false;
         }
+    }
+
+    protected void openUrl(String url) {
+        driver.get(url);
+        pauseForDemo();
+    }
+
+    protected void openRelativePath(String path) {
+        openUrl(ConfigReader.get("base.url") + path);
     }
 
     protected void waitForUrlContains(String path) {

@@ -1,8 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="MentorMatch Automation Suite" parallel="false">
-    <test name="Auth Smoke Flow">
+    <listeners>
+        <listener class-name="com.mentormatch.utils.TestListener"/>
+    </listeners>
+    <test name="Auth Smoke Tests">
         <classes>
-            <class name="com.mentormatch.automation.runners.TestRunner"/>
+            <class name="com.mentormatch.tests.AuthSmokeTest"/>
         </classes>
     </test>
 </suite>
